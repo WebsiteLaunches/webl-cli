@@ -11,8 +11,8 @@ Build-Depends: debhelper-compat (= 13),
                python3-rich (>= 13.0.0)
 Standards-Version: 4.6.2
 Homepage: https://websitelaunches.com
-Vcs-Browser: https://github.com/websitelaunches/webl-cli
-Vcs-Git: https://github.com/websitelaunches/webl-cli.git
+Vcs-Browser: https://github.com/WebsiteLaunches/webl-cli
+Vcs-Git: https://github.com/WebsiteLaunches/webl-cli.git
 Rules-Requires-Root: no
 
 Package: webl
