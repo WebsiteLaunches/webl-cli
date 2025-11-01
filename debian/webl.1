@@ -1,0 +1,103 @@
+.TH WEBL "1" "November 2025" "webl 0.1.0" "User Commands"
+.SH NAME
+webl \- command-line tool for domain intelligence lookups
+.SH SYNOPSIS
+.B webl
+[\fI\,COMMAND\/\fR] [\fI\,OPTIONS\/\fR]
+.SH DESCRIPTION
+webl is a command-line tool for domain intelligence lookups using the Website
+Launches API. It provides domain authority scores, age data, launch detection,
+and industry categorization directly from the terminal.
+.PP
+Features include domain authority scores (0-100), domain age and registration
+data, launch detection and dates, industry categorization, AI-generated
+descriptions, batch lookups for multiple domains, and multiple output formats
+(JSON, CSV, formatted terminal output).
+.SH COMMANDS
+.TP
+\fBlookup\fR \fIDOMAIN\fR
+Look up domain intelligence for a single domain
+.TP
+\fBbatch\fR \fIFILE\fR
+Batch lookup multiple domains from a file
+.TP
+\fBconfig set-key\fR \fIAPI_KEY\fR
+Set your API key for higher request limits
+.TP
+\fBconfig show\fR
+Show current configuration
+.TP
+\fBconfig path\fR
+Show path to config file
+.SH OPTIONS
+.TP
+\fB\-\-version\fR
+Show the version and exit
+.TP
+\fB\-\-help\fR
+Show help message and exit
+.TP
+\fB\-\-history\fR
+Include historical authority data (requires Growth+ tier)
+.TP
+\fB\-\-json\fR
+Output as JSON
+.TP
+\fB\-\-csv\fR
+Output as CSV
+.SH EXAMPLES
+.TP
+Look up a domain:
+.B webl github.com
+.TP
+Look up with historical data:
+.B webl github.com \-\-history
+.TP
+Output as JSON:
+.B webl github.com \-\-json
+.TP
+Batch lookup from file:
+.B webl batch domains.txt
+.TP
+Set API key:
+.B webl config set-key YOUR_API_KEY
+.SH API TIERS
+.TP
+\fBFree\fR
+3,000 requests per month (no API key needed)
+.TP
+\fBStarter\fR
+50,000 requests per month + AI descriptions
+.TP
+\fBGrowth\fR
+250,000 requests per month + historical data + batch lookups
+.TP
+\fBPro\fR
+1,000,000 requests per month
+.TP
+\fBBusiness\fR
+5,000,000 requests per month + custom rate limits
+.SH FILES
+.TP
+\fI~/.config/webl/config.json\fR
+User configuration file containing API key
+.SH ENVIRONMENT
+.TP
+\fBWEBL_API_KEY\fR
+Alternative way to specify API key (overrides config file)
+.SH SEE ALSO
+Full documentation available at:
+.br
+https://websitelaunches.com/docs
+.PP
+API dashboard:
+.br
+https://websitelaunches.com/api/dashboard
+.SH AUTHOR
+Written by Website Launches team.
+.SH COPYRIGHT
+Copyright \(co 2024-2025 Website Launches.
+.br
+License: MIT License
+.SH BUGS
+Report bugs to: https://github.com/websitelaunches/webl-cli/issues

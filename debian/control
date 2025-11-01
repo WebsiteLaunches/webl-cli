@@ -1,0 +1,40 @@
+Source: webl
+Section: net
+Priority: optional
+Maintainer: Taylor Hawkes <taylordhawkes@gmail.com>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-setuptools,
+               python3-click (>= 8.0.0),
+               python3-requests (>= 2.28.0),
+               python3-rich (>= 13.0.0)
+Standards-Version: 4.6.2
+Homepage: https://websitelaunches.com
+Vcs-Browser: https://github.com/websitelaunches/webl-cli
+Vcs-Git: https://github.com/websitelaunches/webl-cli.git
+Rules-Requires-Root: no
+
+Package: webl
+Architecture: all
+Depends: ${python3:Depends},
+         ${misc:Depends},
+         python3-click (>= 8.0.0),
+         python3-requests (>= 2.28.0),
+         python3-rich (>= 13.0.0)
+Description: command-line tool for domain intelligence lookups
+ webl is a CLI tool for domain intelligence lookups using the Website
+ Launches API. It provides domain authority scores, age data, launch
+ detection, and industry categorization directly from the terminal.
+ .
+ Features:
+  * Domain authority scores (0-100)
+  * Domain age and registration data
+  * Launch detection and dates
+  * Industry categorization
+  * AI-generated descriptions
+  * Batch lookups for multiple domains
+  * Multiple output formats (JSON, CSV, formatted terminal output)
+ .
+ No API key is required for basic usage (3,000 requests per month).
+ Higher limits available with a free API key from websitelaunches.com.
