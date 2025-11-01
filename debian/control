@@ -22,19 +22,12 @@ Depends: ${python3:Depends},
          python3-click (>= 8.0.0),
          python3-requests (>= 2.28.0),
          python3-rich (>= 13.0.0)
-Description: command-line tool for domain intelligence lookups
- webl is a CLI tool for domain intelligence lookups using the Website
- Launches API. It provides domain authority scores, age data, launch
- detection, and industry categorization directly from the terminal.
+Description: CLI client for Website Launches domain intelligence API
+ webl is a command-line client for querying domain intelligence data
+ including domain age, registration information, and categorization.
+ It provides a convenient interface for developers and system
+ administrators working with domain data.
  .
- Features:
-  * Domain authority scores (0-100)
-  * Domain age and registration data
-  * Launch detection and dates
-  * Industry categorization
-  * AI-generated descriptions
-  * Batch lookups for multiple domains
-  * Multiple output formats (JSON, CSV, formatted terminal output)
- .
- No API key is required for basic usage (3,000 requests per month).
- Higher limits available with a free API key from websitelaunches.com.
+ The tool offers multiple output formats (JSON, CSV, formatted text)
+ for easy integration with scripts and workflows. It supports both
+ single domain lookups and batch processing from files.
