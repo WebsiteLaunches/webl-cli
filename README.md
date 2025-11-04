@@ -4,11 +4,20 @@ Command-line tool for domain intelligence lookups. Get domain authority, age, la
 
 ## Installation
 
+### macOS (Homebrew)
+
+```bash
+brew tap websitelaunches/tap
+brew install webl
+```
+
+### pip (all platforms)
+
 ```bash
 pip install webl
 ```
 
-Or with pipx (recommended for CLI tools):
+### pipx (recommended for CLI tools)
 
 ```bash
 pipx install webl
