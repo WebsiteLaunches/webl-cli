@@ -49,7 +49,7 @@ def output_pretty(data):
 
     # Add basic info
     table.add_row("Domain", domain_data.get('domain', 'N/A'))
-    table.add_row("Authority", f"{domain_data.get('domain_authority', 'N/A')}/100")
+    table.add_row("Authority", f"{domain_data.get('site_authority', 'N/A')}/100")
 
     age = domain_data.get('domain_age')
     age_date = domain_data.get('domain_age_date')
@@ -155,7 +155,7 @@ def output_csv(data):
     # Data row
     writer.writerow([
         domain_data.get('domain', ''),
-        domain_data.get('domain_authority', ''),
+        domain_data.get('site_authority', ''),
         domain_data.get('domain_age', ''),
         domain_data.get('domain_age_date', ''),
         domain_data.get('launch_detected', ''),
@@ -203,7 +203,7 @@ def output_batch_pretty(data):
 
     for result in results:
         domain = result.get('domain', 'N/A')
-        authority = result.get('domain_authority', 'N/A')
+        authority = result.get('site_authority', 'N/A')
         age = result.get('domain_age', 'N/A')
         category = result.get('category', 'N/A')
 
@@ -244,7 +244,7 @@ def output_batch_csv(data):
     for result in results:
         writer.writerow([
             result.get('domain', ''),
-            result.get('domain_authority', ''),
+            result.get('site_authority', ''),
             result.get('domain_age', ''),
             result.get('domain_age_date', ''),
             result.get('launch_detected', ''),

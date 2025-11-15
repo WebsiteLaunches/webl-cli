@@ -1,8 +1,20 @@
 # webl - Domain Intelligence CLI
 
-Command-line tool for domain intelligence lookups. Get domain authority, age, launch detection, and industry data directly from your terminal.
+Command-line tool for domain intelligence lookups. Get WebL Site Authority, age, launch detection, and industry data directly from your terminal.
 
 ## Installation
+
+### Quick Install (recommended)
+
+```bash
+curl -fsSL https://websitelaunches.com/install.php | bash
+```
+
+This installer will automatically:
+- Detect your OS and Python version
+- Choose the best installation method (Homebrew, pipx, or pip)
+- Verify the installation
+- Show you quick start examples
 
 ### macOS (Homebrew)
 
@@ -73,7 +85,7 @@ webl shopify.com --json
 ```
 
 Output includes:
-- Domain authority score (0-100)
+- WebL Site Authority score (0-100)
 - Domain age and registration date
 - Launch detection and date
 - Industry category classification
@@ -169,7 +181,7 @@ $ webl github.com --json | jq
   "ok": true,
   "data": {
     "domain": "github.com",
-    "domain_authority": 85,
+    "site_authority": 85,
     "domain_age": 17.2,
     ...
   }
