@@ -159,7 +159,7 @@ webl config show
 ### Scripting & Automation
 ```bash
 # Pipe domains, extract data
-cat domains.txt | xargs -I {} webl {} --json | jq -r '.data.domain_authority'
+cat domains.txt | xargs -I {} webl {} --json | jq -r '.data.site_authority'
 
 # Batch processing
 webl batch domains.txt --csv > results.csv
