@@ -8,7 +8,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="webl",
-    version="0.1.0",
+    version="0.2.0",
     author="Website Launches",
     author_email="support@websitelaunches.com",
     description="Command-line tool for domain intelligence and authority lookups",
